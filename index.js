@@ -31,7 +31,7 @@ var login = exports.login = function(email, password){
  *
  * @param {String} query
  */
-var search = exports.login = function(query) {
+var search = exports.search = function(query) {
   return function(nightmare) {
     nightmare
       .type('#main-search-box', query)

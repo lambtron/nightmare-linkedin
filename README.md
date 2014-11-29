@@ -7,6 +7,18 @@ nightmare-linkedin
 
 Login to your account.
 
+### .search(query)
+
+Adds the query to the LinkedIn omni search box, submits it, and waits until responses are returned on the page.
+
+### .filter()
+
+WIP
+
+### .crawl()
+
+WIP
+
 ## License (MIT)
 
 ```
