@@ -1,0 +1,19 @@
+{
+  "name": "nightmare-linkedin",
+  "version": "0.1.0",
+  "author": "Andy Jiang",
+  "keywords": [
+    "nightmarejs",
+    "phantomjs",
+    "linkedin"
+  ],
+  "description": "A Nightmare plugin for LinkedIn.com",
+  "repository": {
+    "type": "git",
+    "url": "https://github.com/segmentio/nightmare-linkedin.git"
+  },
+  "dependencies": {
+    "superagent": "~0.17.0"
+  },
+  "devDependencies": {}
+}
