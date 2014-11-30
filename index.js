@@ -29,10 +29,12 @@ var login = exports.login = function(email, password){
 /**
  * Perform a search.
  *
+ * @param {String} type
  * @param {String} query
  */
 
-var search = exports.search = function(query) {
+var search = exports.search = function(type, query) {
+  if (!type || type.length === 0) type = 'all';
   return function(nightmare) {
     nightmare
       .exists('#main-search-box', function(ready) {
@@ -41,9 +43,11 @@ var search = exports.search = function(query) {
       })
       .type('#main-search-box', query)
       .click('.search-button')
-      .wait('.search-results');
+      .wait('#search-types')
+      .click('li > a[href*="' + type + '"]')
+      .wait(5000);
   }
-}
+};
 
 /**
  * Filter search results.
@@ -64,7 +68,7 @@ var filter = exports.filter = function(filters) {
         .wait(1000);
     });
   }
-}
+};
 
 /**
  * Crawl X pages from search results.
@@ -74,23 +78,6 @@ var filter = exports.filter = function(filters) {
 
 var crawl = exports.crawl = function(pages) {
   return function(nightmare) {
-    // Assume already on search results page.
-    var links = [];
-    nightmare
-      .exists('.search-results', function(ready) {
-        if (!ready) return;
-      })
-      .evaluate(function() {
-        return document.querySelectorAll('a.title');
-      }, function(res) {
-        links = res;
-      });
-
-    for (var i = 0; i < links.length; i++) {
-      nightmare
-        .click(links[i])
-        .wait(5000)
-        .back();
-    };
+    // WIP
   }
-}
+};
