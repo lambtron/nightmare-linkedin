@@ -18,11 +18,11 @@ var login = exports.login = function(email, password){
   return function(nightmare) {
     nightmare
       .viewport(800, 1600)
-      .goto('https://www.linkedin.com/')
-        .type('#session_key-login', email)
-        .type('#session_password-login', password)
-        .click('#signin')
-        .wait('.search-button');
+      .goto('https://www.linkedin.com/uas/login')
+      .type('#session_key-login', email)
+      .type('#session_password-login', password)
+      .click('#btn-primary')
+      .wait(5000);
   };
 };
 
@@ -41,7 +41,6 @@ var search = exports.search = function(query) {
   }
 }
 
-
 /**
  * Filter search results.
  *
@@ -58,9 +57,10 @@ var filter = exports.filter = function(filter) {
   }
 }
 
-
 /**
  * Crawl X pages from search results.
+ *
+ * @param {Integer} pages leave blank for indefinite crawling.
  */
 
 var crawl = exports.crawl = function(pages) {
