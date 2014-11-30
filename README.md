@@ -5,7 +5,7 @@ nightmare-linkedin
 
 ### .login(email, password)
 
-Login to your account. Both email and password are passed as strings.
+Login to a LinkedIn account. Both email and password are passed as strings.
 
 ### .search(type, query)
 
@@ -13,19 +13,19 @@ Adds the query to the LinkedIn omni search box, submits it, and waits until resp
 
 ### .filter(array)
 
+Filters search results based on an array of strings. Filters include Relationship (`1st Connections`, `2nd Connections`, `Group Members`, etc), Location (`All`, `United States`, `San Francisco Bay Area`, etc), Current Company (`All`, `Segment`, `Facebook`, etc).
 
+### .crawl(pages)
 
-### .crawl()
+_(Work in progress)_ Crawls `pages` of search results. Intended to be used on user profiles so they can see that your LinkedIn account has viewed them.
 
-WIP
+### .connect(user)
 
-### .connect()
+_(Work in progress)_ Sends an invite to connect on LinkedIn.
 
-WIP
+### .viewedMe(cb)
 
-### .viewedMe()
-
-WIP
+_(Work in progress)_ Retrieves a list of all users who has viewed your profile. The callback signature is `cb(users)`.
 
 ## License (MIT)
 
