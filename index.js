@@ -51,13 +51,18 @@ var search = exports.search = function(query) {
  * @param {Array} filter, ['United States']
  */
 
-var filter = exports.filter = function(filter) {
+var filter = exports.filter = function(filters) {
   return function(nightmare) {
-    // Assume already on search results page.
     nightmare
       .exists('.search-results', function(ready) {
-        if (!ready) return;
+        if (!ready) throw 'Search results not ready';
+        return;
       });
+    filters.forEach(function(filter) {
+      nightmare
+        .click('label[title="' + filter + '"]')
+        .wait(1000);
+    });
   }
 }
 
