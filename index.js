@@ -35,6 +35,10 @@ var login = exports.login = function(email, password){
 var search = exports.search = function(query) {
   return function(nightmare) {
     nightmare
+      .exists('#main-search-box', function(ready) {
+        if (!ready) throw 'Search box not ready';
+        return;
+      })
       .type('#main-search-box', query)
       .click('.search-button')
       .wait('.search-results');
