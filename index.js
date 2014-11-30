@@ -45,7 +45,7 @@ var search = exports.search = function(type, query) {
       .click('.search-button')
       .wait('#search-types')
       .click('li > a[href*="' + type + '"]')
-      .wait(5000);
+      .wait(1000);
   }
 };
 
@@ -77,6 +77,40 @@ var filter = exports.filter = function(filters) {
  */
 
 var crawl = exports.crawl = function(pages) {
+  return function(nightmare) {
+    // WIP
+  }
+};
+
+/**
+ * Connect with user.
+ *
+ * WIP
+ *
+ * @param {String} user username or URL or nightmare is already on user page
+ */
+
+var connect = exports.connect = function(user) {
+  return function(nightmare) {
+    nightmare
+      .exists('.button-primary', function(ready) {
+        if (!read) throw 'Connect button not ready';
+        return;
+      })
+      .click('.button-primary')
+      .wait('.btn-primary')
+      .click('.btn-primary')
+      .wait(1000);
+  }
+};
+
+/**
+ * Get an array of users who has viewed me.
+ *
+ *
+ */
+
+var viewedMe = exports.viewedMe = function() {
   return function(nightmare) {
     // WIP
   }
