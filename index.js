@@ -31,6 +31,7 @@ var login = exports.login = function(email, password){
  *
  * @param {String} query
  */
+
 var search = exports.search = function(query) {
   return function(nightmare) {
     nightmare
@@ -46,6 +47,7 @@ var search = exports.search = function(query) {
  *
  * @param {Array} filter, ['United States']
  */
+
 var filter = exports.filter = function(filter) {
   return function(nightmare) {
     // Assume already on search results page.
@@ -60,6 +62,7 @@ var filter = exports.filter = function(filter) {
 /**
  * Crawl X pages from search results.
  */
+
 var crawl = exports.crawl = function(pages) {
   return function(nightmare) {
     // Assume already on search results page.
