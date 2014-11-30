@@ -99,6 +99,7 @@ var connect = exports.connect = function(user) {
       })
       .click('.button-primary')
       .wait('.btn-primary')
+      // Need to select how to i know this person OR fill in an email address
       .click('.btn-primary')
       .wait(1000);
   }

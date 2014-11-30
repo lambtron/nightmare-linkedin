@@ -5,17 +5,25 @@ nightmare-linkedin
 
 ### .login(email, password)
 
-Login to your account.
+Login to your account. Both email and password are passed as strings.
 
-### .search(query)
+### .search(type, query)
 
-Adds the query to the LinkedIn omni search box, submits it, and waits until responses are returned on the page.
+Adds the query to the LinkedIn omni search box, submits it, and waits until responses are returned on the page, then filters by type. Both type and query are passed as strings. Accepted type consists of the LinkedIn drop downs: `people`, `jobs`, `companies`, `groups`, `universities`, `posts`, `inbox`. If `type` is blank or undefined, defaults to `all`.
 
-### .filter()
+### .filter(array)
+
+
+
+### .crawl()
 
 WIP
 
-### .crawl()
+### .connect()
+
+WIP
+
+### .viewedMe()
 
 WIP
 
