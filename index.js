@@ -22,7 +22,7 @@ var login = exports.login = function(email, password){
       .type('#session_key-login', email)
       .type('#session_password-login', password)
       .click('#btn-primary')
-      .wait(5000);
+      .wait('#main-search-box');
   };
 };
 
