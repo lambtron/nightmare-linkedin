@@ -35,6 +35,7 @@ var login = exports.login = function(email, password){
 
 var search = exports.search = function(type, query) {
   if (!type || type.length === 0) type = 'all';
+  type = type.toLowerCase();
   return function(nightmare) {
     nightmare
       .exists('#main-search-box', function(ready) {
