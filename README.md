@@ -3,27 +3,27 @@ nightmare-linkedin
 
 [Nightmare](https://github.com/segmentio/nightmare) plugin for LinkedIn.com
 
-### .login(email, password)
+#### .login(email, password)
 
 Login to a LinkedIn account. Both email and password are passed as strings.
 
-### .search(type, query)
+#### .search(type, query)
 
 Adds the query to the LinkedIn omni search box, submits it, and waits until responses are returned on the page, then filters by type. Both type and query are passed as strings. Accepted type consists of the LinkedIn drop downs: `people`, `jobs`, `companies`, `groups`, `universities`, `posts`, `inbox`. If `type` is blank or undefined, defaults to `all`.
 
-### .filter(array)
+#### .filter(array)
 
 Filters search results based on an array of strings. Filters include Relationship (`1st Connections`, `2nd Connections`, `Group Members`, etc), Location (`All`, `United States`, `San Francisco Bay Area`, etc), Current Company (`All`, `Segment`, `Facebook`, etc).
 
-### .crawl(pages)
+#### .crawl(pages)
 
 _(Work in progress)_ Crawls `pages` of search results. Intended to be used on user profiles so they can see that your LinkedIn account has viewed them.
 
-### .connect(user)
+#### .connect(user)
 
 _(Work in progress)_ Sends an invite to connect on LinkedIn.
 
-### .viewedMe(cb)
+#### .viewedMe(cb)
 
 _(Work in progress)_ Retrieves a list of all users who has viewed your profile. The callback signature is `cb(users)`.
 
