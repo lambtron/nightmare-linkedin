@@ -76,8 +76,19 @@ var filter = exports.filter = function(filters) {
  */
 
 var crawl = exports.crawl = function(pages) {
+  var pages = pages || 10;
   return function(nightmare) {
-    // WIP
+    for (var i = 0; i < pages; i++) {
+      for (var j = 0; j < 10; j++) {
+        nightmare
+          .click('#results > li:nth-child(' + (j + 1) + ')')
+          .wait(1000)
+          .back();
+      }
+      nightmare
+        .click('#results-pagination > ul > li.next > a')
+        .wait(1000);
+    }
   }
 };
 
