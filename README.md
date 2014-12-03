@@ -17,7 +17,7 @@ Filters search results based on an array of strings. Filters include Relationshi
 
 #### .crawl(pages)
 
-_(Work in progress)_ Crawls `pages` of search results. Intended to be used on user profiles so they can see that your LinkedIn account has viewed them.
+From results page, click through to each profile, then return back to the results page. The `pages` parameter indicates the number of pages you want to crawl. Intended to be used on user profiles so they can see that your LinkedIn account has viewed them.
 
 #### .connect(user)
 

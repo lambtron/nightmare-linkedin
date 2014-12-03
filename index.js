@@ -82,12 +82,12 @@ var crawl = exports.crawl = function(pages) {
       for (var j = 0; j < 10; j++) {
         nightmare
           .click('#results > li:nth-child(' + (j + 1) + ')')
-          .wait(1000)
+          .wait(5000)
           .back();
       }
       nightmare
         .click('#results-pagination > ul > li.next > a')
-        .wait(1000);
+        .wait(2000);
     }
   }
 };
