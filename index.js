@@ -4,8 +4,6 @@
  */
 
 var exec = require('child_process').exec;
-var request = require('superagent');
-var fs = require('fs');
 
 /**
  * Login to a LinkedIn account.
