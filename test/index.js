@@ -16,8 +16,9 @@ describe('Nightmare-LinkedIn', function () {
       var email = '';
       var password = '';
       new Nightmare()
-        .use(LinkedIn.login(email, password)
+        .use(LinkedIn.login(email, password))
         .run(done);
     });
+
   });
 });
