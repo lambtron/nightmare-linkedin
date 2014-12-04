@@ -13,7 +13,7 @@ var after = require('after');
  */
 
 describe('Nightmare-LinkedIn', function() {
-  this.timeout(40000);
+  this.timeout(100000);
   var email = 'andyjiang+@gmail.com';
   var password = 'nightmarelinkedin';
   var results = 'https://www.linkedin.com/vsearch/f?orig=TRNV&rsid=282041601417333429963&trk=vsrp_all_sel&trkInfo=VSRPsearchId%3A282041601417333429963%2CVSRPcmpt%3Atrans_nav';

@@ -44,7 +44,7 @@ var search = exports.search = function(type, query) {
       .click('.search-button')
       .wait('#search-types')
       .click('li > a[href*="' + type + '"]')
-      .wait(1000);
+      .wait(5000);
   }
 };
 
@@ -64,7 +64,7 @@ var filter = exports.filter = function(filters) {
     filters.forEach(function(filter) {
       nightmare
         .click('label[title="' + filter + '"]')
-        .wait(1000);
+        .wait(5000);
     });
   }
 };
@@ -87,7 +87,7 @@ var crawl = exports.crawl = function(pages) {
       }
       nightmare
         .click('#results-pagination > ul > li.next > a')
-        .wait(2000);
+        .wait(5000);
     }
   }
 };
@@ -117,8 +117,6 @@ var connect = exports.connect = function(user) {
 
 /**
  * Get an array of users who has viewed me.
- *
- *
  */
 
 var viewedMe = exports.viewedMe = function() {
