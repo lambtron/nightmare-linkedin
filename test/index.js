@@ -11,8 +11,9 @@ describe('Nightmare-LinkedIn', function() {
    */
 
   describe('navigation', function() {
-    var email = '';
-    var password = '';
+    var email = 'andyjiang+@gmail.com';
+    var password = 'nightmarelinkedin';
+    var results = 'https://www.linkedin.com/vsearch/f?orig=TRNV&rsid=282041601417333429963&trk=vsrp_all_sel&trkInfo=VSRPsearchId%3A282041601417333429963%2CVSRPcmpt%3Atrans_nav';
 
     it('should login to LinkedIn', function(done) {
       new Nightmare()
@@ -21,8 +22,8 @@ describe('Nightmare-LinkedIn', function() {
     });
 
     it('should search LinkedIn', function(done) {
-      var type = '';
-      var query = '';
+      var type = 'people';
+      var query = 'product manager';
       new Nightmare()
         .use(LinkedIn.login(email, password))
         .use(LinkedIn.search(type, query))
@@ -30,8 +31,7 @@ describe('Nightmare-LinkedIn', function() {
     });
 
     it('should filter LinkedIn search results', function(done) {
-      var filter = [];
-      var results = '';
+      var filter = ['United States', 'United Kingdom'];
       new Nightmare()
         .use(LinkedIn.login(email, password))
         .goto(results)
@@ -41,7 +41,6 @@ describe('Nightmare-LinkedIn', function() {
 
     it('should crawl LinkedIn search results', function(done) {
       var pages = 2;
-      var results = '';
       new Nightmare()
         .use(LinkedIn.login(email, password))
         .goto(results)
