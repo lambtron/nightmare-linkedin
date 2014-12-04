@@ -1,7 +1,7 @@
 nightmare-linkedin
 =================
 
-[Nightmare](https://github.com/segmentio/nightmare) plugin for LinkedIn.com
+[Nightmare](https://github.com/segmentio/nightmare) plugin for LinkedIn.com. Refer to [example.js](https://github.com/lambtron/nightmare-linkedin/blob/master/example.js) for more details.
 
 #### .login(email, password)
 
