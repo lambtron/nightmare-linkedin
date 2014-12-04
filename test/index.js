@@ -1,15 +1,19 @@
+
+/**
+ * Module dependencies.
+ */
+
 var Nightmare = require('nightmare');
 var LinkedIn = require('../index.js');
 var should = require('should');
 var after = require('after');
 
+/**
+ * Test.
+ */
+
 describe('Nightmare-LinkedIn', function() {
   this.timeout(40000);
-
-  /**
-   * Navigation
-   */
-
   var email = 'andyjiang+@gmail.com';
   var password = 'nightmarelinkedin';
   var results = 'https://www.linkedin.com/vsearch/f?orig=TRNV&rsid=282041601417333429963&trk=vsrp_all_sel&trkInfo=VSRPsearchId%3A282041601417333429963%2CVSRPcmpt%3Atrans_nav';
