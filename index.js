@@ -20,7 +20,7 @@ var login = exports.login = function(email, password){
       .type('#session_key-login', email)
       .type('#session_password-login', password)
       .click('#btn-primary')
-      .wait('#main-search-box');
+      .wait();
   };
 };
 
